@@ -10,7 +10,7 @@ public class Main {
         list.add(new Person("Anna", 22));
         list.add(new Person("Igor", 19));
         list.add(new Person("Mike", 24));
-        list.add(null);
+//        list.add(null);
         list.add(new Person("Nick", 23));
 
         System.out.println(ifPersonWithNameExists(list, "Igor"));

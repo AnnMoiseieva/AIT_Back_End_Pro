@@ -1,6 +1,8 @@
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class Warehouse {
     private String title;
-    private int value;
+    private AtomicInteger value = new AtomicInteger();
     private Object lock = new Object();
 
     public Warehouse(String title) {
@@ -16,8 +18,7 @@ public class Warehouse {
     }
 
     public void addValue(int value) {
-        synchronized(lock) {
-            this.value += value;
-        }
+        this.value.getAndAdd(value);
+        //this.value += value;
     }
 }

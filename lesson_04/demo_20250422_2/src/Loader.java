@@ -1,4 +1,5 @@
 public class Loader implements Runnable {
+
     private String name;
     private int nBox;
     private int capacity;
@@ -17,8 +18,8 @@ public class Loader implements Runnable {
         while (done < nBox) {
             int value = Math.min(nBox - done, capacity);
             warehouse.addValue(value);
-            done += capacity;
+            done += value;
         }
-        System.out.println(name + " finished. Got: " + done + " boxes.");
+        System.out.println(name + " finish. Get: " + done + " boxes");
     }
 }

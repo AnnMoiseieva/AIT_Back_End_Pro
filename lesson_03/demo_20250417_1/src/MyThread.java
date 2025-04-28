@@ -1,9 +1,9 @@
 class MyThread extends Thread {
 
+    @Override
     public void run() {
         while (!isInterrupted()) { // Проверяем флаг прерывания
             System.out.println("Поток работает..." + isInterrupted());
-
             try {
                 Thread.sleep(1000); // Поток засыпает
             } catch (InterruptedException e) {
@@ -11,6 +11,6 @@ class MyThread extends Thread {
                break; // Выход из цикла
             }
         }
-        //System.out.println("Поток завершен.");
+        System.out.println("Поток завершен.");
     }
 }

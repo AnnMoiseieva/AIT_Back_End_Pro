@@ -1,15 +1,22 @@
 public class Loader implements Runnable {
+
     private String name;
     private int nBox;
     private int capacity;
     private Warehouse warehouse;
     private int done = 0;
+    private static String winner = null;
+    private static Object lock = new Object();
 
     public Loader(String name, int nBox, int capacity, Warehouse warehouse) {
         this.name = name;
         this.nBox = nBox;
         this.capacity = capacity;
         this.warehouse = warehouse;
+    }
+
+    public static String getWinner () {
+        return winner;
     }
 
     @Override
@@ -19,6 +26,11 @@ public class Loader implements Runnable {
             warehouse.addValue(value);
             done += capacity;
         }
-        System.out.println(name + " finished. Got: " + done + " boxes.");
+        synchronized (lock) {
+            if (winner == null) {
+                winner = name;
+            }
+        }
+        System.out.println(name + " finish. Got " + done + " boxes.");
     }
 }

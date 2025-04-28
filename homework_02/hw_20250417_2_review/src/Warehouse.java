@@ -3,6 +3,7 @@ public class Warehouse {
     private int value;
     private Object lock = new Object();
 
+
     public Warehouse(String title) {
         this.title = title;
     }
@@ -15,8 +16,8 @@ public class Warehouse {
                 '}';
     }
 
-    public void addValue(int value) {
-        synchronized(lock) {
+    public synchronized void addValue(int value) {
+        synchronized (lock) {
             this.value += value;
         }
     }

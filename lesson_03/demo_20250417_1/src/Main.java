@@ -5,5 +5,5 @@ public class Main {
         Thread.sleep(3000);
         thread.interrupt(); // Отправляем запрос на прерывание
     }
-    }
+}
 
