@@ -1,4 +1,4 @@
-public class Worker implements Runnable{
+public class Worker implements Runnable {
     private TaskBoard taskBoard;
     private String name;
 
@@ -9,7 +9,7 @@ public class Worker implements Runnable{
 
     @Override
     public void run() {
-        while (true){
+        while (true) {
             String task = taskBoard.getTask();
             System.out.println(task + " " + name);
         }

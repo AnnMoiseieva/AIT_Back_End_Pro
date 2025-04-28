@@ -1,4 +1,4 @@
-public class TaskBoardImpl1 implements TaskBoard{
+public class TaskBoardImpl1 implements TaskBoard {
     private String task;
 
     @Override
@@ -9,7 +9,7 @@ public class TaskBoardImpl1 implements TaskBoard{
 
     @Override
     public synchronized String getTask() {
-        while (task == null){
+        while (task == null) {
             try {
                 this.wait();
             } catch (InterruptedException e) {

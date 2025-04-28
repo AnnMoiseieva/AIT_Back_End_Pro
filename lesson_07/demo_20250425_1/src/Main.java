@@ -14,6 +14,5 @@ public class Main {
 
         manager.start();
         manager.join();
-
     }
 }
