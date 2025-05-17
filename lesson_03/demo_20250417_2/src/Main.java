@@ -1,9 +1,12 @@
 public class Main {
+
     private static final int N_BOX = 1000;
     private static final int CAPACITY = 1;
 
     public static void main(String[] args) throws InterruptedException {
+
         Warehouse warehouse = new Warehouse("#1");
+
         Thread[] loaders = {
                 new Thread(new Loader("Jack", N_BOX, CAPACITY, warehouse)),
                 new Thread(new Loader("John", N_BOX, CAPACITY, warehouse)),

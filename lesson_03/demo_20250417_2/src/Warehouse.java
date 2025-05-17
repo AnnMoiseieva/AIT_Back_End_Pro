@@ -1,4 +1,5 @@
 public class Warehouse {
+
     private String title;
     private int value;
     private Object lock = new Object();
@@ -16,7 +17,7 @@ public class Warehouse {
     }
 
     public void addValue(int value) {
-        synchronized(lock) {
+        synchronized (lock) {
             this.value += value;
         }
     }

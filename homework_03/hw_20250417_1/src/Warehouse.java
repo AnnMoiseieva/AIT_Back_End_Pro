@@ -9,10 +9,8 @@ public class Warehouse {
 
     @Override
     public String toString() {
-        return "Warehouse{" +
-                "title='" + title + '\'' +
-                ", value=" + value +
-                '}';
+        return String.format("Warehouse: title - %s, value - %d.", title, value);
+
     }
 
     public void addValue(int value) {

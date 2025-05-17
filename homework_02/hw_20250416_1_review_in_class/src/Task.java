@@ -9,7 +9,7 @@ public class Task extends Thread {
     @Override
     public void run() {
         String name = Thread.currentThread().getName();
-        for(int i=2; true ; i+=factor) {
+        for (int i = 2; true; i += factor) {
             System.out.println(name + "by " + 2 + ": " + i);
             try {
                 Thread.sleep(300);

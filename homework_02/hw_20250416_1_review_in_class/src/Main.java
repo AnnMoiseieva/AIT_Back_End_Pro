@@ -1,5 +1,7 @@
 public class Main {
+
     public static void main(String[] args) {
+
         Task task2 = new Task(2);
         Task task3 = new Task(3);
 

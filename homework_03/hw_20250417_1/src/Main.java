@@ -8,6 +8,7 @@ public class Main {
     public static final Object winnerLock = new Object();
 
     public static void main(String[] args) throws InterruptedException {
+
         Warehouse warehouse = new Warehouse("#1");
 
         Thread[] loaders = {

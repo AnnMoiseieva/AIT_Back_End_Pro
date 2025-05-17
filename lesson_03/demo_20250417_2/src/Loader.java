@@ -1,4 +1,5 @@
 public class Loader implements Runnable {
+
     private String name;
     private int nBox;
     private int capacity;
