@@ -1,8 +1,10 @@
 package com.ait;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Main {
@@ -27,8 +29,10 @@ public class Main {
         Person personData = mapper.readValue(new File("person1.json"), Person.class);
         System.out.println("person data: " + personData);
 
-        Person[] peopleData = mapper.readValue(new File("person2.json"), Person[].class);
-        System.out.println("people data: " + Arrays.toString(peopleData));
-
+//        Person[] peopleData = mapper.readValue(new File("person2.json"), Person[].class);
+        ArrayList<Person> peopleData = mapper.readValue(new File("person2.json"), new TypeReference<ArrayList<Person>>() {
+        });
+//        System.out.println("people data: " + Arrays.toString(peopleData));
+        System.out.println(peopleData);
     }
 }
