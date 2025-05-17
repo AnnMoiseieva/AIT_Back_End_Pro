@@ -1,5 +1,7 @@
 public class Main2 {
+
     public static void main(String[] args) {
+
         MyThread thread1 = new MyThread();
         Thread thread2 = new Thread(new MyRunnable());
         System.out.println("---- start main ");

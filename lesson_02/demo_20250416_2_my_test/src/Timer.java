@@ -2,6 +2,7 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
 public class Timer extends Thread {
+
     private int timeOut = 2;
 
     public void setTimeOut(int timeOut) {

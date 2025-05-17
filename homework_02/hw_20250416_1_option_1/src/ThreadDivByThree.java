@@ -1,6 +1,7 @@
 public class ThreadDivByThree extends Thread {
 
     boolean running = true;
+
     public void stopRunning() {
         running = false;
     }

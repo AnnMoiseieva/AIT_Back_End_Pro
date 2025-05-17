@@ -1,4 +1,5 @@
 public class MyThread extends Thread {
+
     private int number = 1;
     private int div;
 
@@ -20,5 +21,4 @@ public class MyThread extends Thread {
             number++;
         }
     }
-
 }

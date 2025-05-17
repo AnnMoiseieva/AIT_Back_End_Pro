@@ -7,10 +7,11 @@ public class Main {
         System.out.println(name + " " + id + " START");
 
         //anonymous class:
-        Thread thread1 = new Thread(){    // Main$01 extends Thread
+        Thread thread1 = new Thread() {    // Main$01 extends Thread
             @Override
             public void run() {
-                System.out.println(Thread.currentThread().getName()+ " START анонимный класс");
+                System.out.println(Thread.currentThread().getName()
+                        + " START анонимный класс");
             }
         };
 
@@ -19,17 +20,17 @@ public class Main {
                 new MyThread(),
                 new MyThread(),
                 new Thread(new MyRunnable()),
-                new Thread(()-> {
+                new Thread(() -> {
                     System.out.println(name + " " + id + " START LAMBDA");
                 }),
                 thread1
         };
 
-        for (Thread thread: threads) {
+        for (Thread thread : threads) {
             thread.start();
 
         }
-        threads[threads.length-1].join();
+        threads[threads.length - 1].join();
 
         Thread.sleep(1000);
 

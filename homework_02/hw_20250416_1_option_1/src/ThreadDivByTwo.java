@@ -1,6 +1,7 @@
 public class ThreadDivByTwo extends Thread {
 
     boolean running = true;
+
     public void stopRunning() {
         running = false;
     }
