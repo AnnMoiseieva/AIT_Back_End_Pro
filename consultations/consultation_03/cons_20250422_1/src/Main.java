@@ -1,8 +1,11 @@
 public class Main {
-    public static  Object lock = new Object();
+
+    public static Object lock = new Object();
+
     public static void main(String[] args) throws InterruptedException {
-        Account accountA = new Account("DE1111","Jack", 1000);
-        Account accountB = new Account("DE2222","John", 1000);
+
+        Account accountA = new Account("DE1111", "Jack", 1000);
+        Account accountB = new Account("DE2222", "John", 1000);
 
         Thread thread1 = new Thread(() -> transfer(accountA, accountB, 100), "T1");
         Thread thread2 = new Thread(() -> transfer(accountB, accountA, 500), "T2");
@@ -18,7 +21,8 @@ public class Main {
 
     }
 
-    public static void transfer(Account from, Account to, double amount){
+    public static void transfer(Account from, Account to, double amount) {
+
         synchronized (from) {
             //System.out.println("account " + from + " is locked by " + Thread.currentThread().getName());
 

@@ -1,4 +1,5 @@
 public class Main {
+
     public static  Object lock = new Object();
     public static void main(String[] args) throws InterruptedException {
         Account accountA = new Account("DE1111","Jack", 1000);
@@ -17,7 +18,6 @@ public class Main {
 
         System.out.println(accountA);
         System.out.println(accountB);
-
     }
 
     public static synchronized void transfer(Account from, Account to, double amount){

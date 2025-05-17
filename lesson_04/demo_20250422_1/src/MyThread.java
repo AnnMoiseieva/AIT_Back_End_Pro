@@ -1,6 +1,7 @@
-public class MyThread extends Thread{
+public class MyThread extends Thread {
+
     private volatile boolean isFinish = false;
-    private int counter=0;
+    private int counter = 0;
 
     public boolean isFinish() {
         return isFinish;
@@ -17,7 +18,7 @@ public class MyThread extends Thread{
     @Override
     public void run() {
         System.out.println("Thread start");
-        while (!isFinish){
+        while (!isFinish) {
             counter++;
         }
         System.out.println("Thread finish " + counter);
